@@ -6,7 +6,7 @@ const List = (props) => {
         <ul className={props.className}>
             {props.items.map((item, index) => (
                 <ItemOfList
-                    key={index+1}
+                    key={index}
                     item={item}
                     itemClassName={props.itemClassName}
                 />

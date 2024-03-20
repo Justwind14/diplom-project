@@ -1,5 +1,5 @@
 import React, {createContext, useContext, useState} from 'react';
-import MainGoodsList from "../components/Main/MainGoodsList";
+import MainGoodsList from "../components/main/MainGoodsList";
 
 export const GoodsContext = createContext(undefined);
 
