@@ -12,7 +12,10 @@ const MainGoodsItem = (props) => {
         body: props.good.body,
         price: props.good.price,
         imgName: props.good.imgName,
-        alt: props.good.alt
+        alt: props.good.alt,
+        size: props.good.size,
+        color: props.good.color,
+        quantity: 1,
     };
 
     return (
