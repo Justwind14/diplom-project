@@ -6,8 +6,8 @@ const RegistrationForm = () => {
     const [nameValue, setNameValue] = useState('');
     const [surNameValue, setSurNameValue] = useState('');
     const [radioValue, setRadioValue] = useState('');
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const refForm = useRef();
     const submitting = (e) => {
@@ -29,11 +29,6 @@ const RegistrationForm = () => {
         }
         else alert('ЗАПОЛНИТЕ ВСЕ ПОЛЯ ВВОДА');
     }
-
-    // const handleReset = () => {
-    //
-    //     refForm.current.reset();
-    // };
 
     return (
         <form ref={refForm} >
