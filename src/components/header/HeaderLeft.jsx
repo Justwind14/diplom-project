@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 
 const HeaderLeft = () => {
     const items = [
-        <Link className="menu__link" to="/mainpage">
+        <Link className="menu__link" to="/">
             <img className="menu__logo-img" src={require('../../img/logo.png')} alt="logo"/>
         </Link>,
         <Link className="menu__link" to="#">

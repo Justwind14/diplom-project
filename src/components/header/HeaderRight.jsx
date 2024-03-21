@@ -29,36 +29,6 @@ const HeaderRight = () => {
                                     </svg>
                                 </Link>
                             </li>
-                            {/*<li><h3 className="burger-menu__title">MENU</h3></li>*/}
-                            {/*<li>*/}
-                            {/*    <ul className="burger-menu__section">*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Accessories</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Bags</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Denim</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">T-Shirts</a></li>*/}
-                            {/*    </ul>*/}
-                            {/*</li>*/}
-                            {/*<li><h4 className="burger-menu__heading">WOMAN</h4></li>*/}
-                            {/*<li>*/}
-                            {/*    <ul className="burger-menu__section">*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Accessories</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Jackets & Coats</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Polos</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">T-Shirts</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Shirts</a></li>*/}
-                            {/*    </ul>*/}
-                            {/*</li>*/}
-                            {/*<li><h4 className="burger-menu__heading">KIDS</h4></li>*/}
-                            {/*<li>*/}
-                            {/*    <ul className="burger-menu__section">*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Accessories</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Jackets & Coats</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Polos</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">T-Shirts</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Shirts</a></li>*/}
-                            {/*        <li className="burger-menu__item"><a href="#">Bags</a></li>*/}
-                            {/*    </ul>*/}
-                            {/*</li>*/}
                             <HeaderMenu/>
                         </ul>
                     </li>

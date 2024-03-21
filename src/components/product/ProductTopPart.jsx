@@ -4,7 +4,7 @@ import LiLinks from "../LiLinks";
 
 const ProductTopPart = () => {
     const breadcrumbs = [
-        {id: 1,  linkPath: '/mainpage', itemTitle: 'HOME', classNm: 'breadcrumbs__link'},
+        {id: 1,  linkPath: '/', itemTitle: 'HOME', classNm: 'breadcrumbs__link'},
         {id: 1,  linkPath: '/catalog', itemTitle: 'MEN', classNm: 'breadcrumbs__link'},
         {id: 1,  linkPath: '/product', itemTitle: 'NEW ARRIVALS', classNm: 'breadcrumbs__link'},
     ]
