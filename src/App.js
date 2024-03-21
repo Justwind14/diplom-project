@@ -1,34 +1,26 @@
 import React from "react";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Catalog from "./components/pages/Catalog";
+import {BrowserRouter} from "react-router-dom";
 import "./styles/style.scss"
-import MainPage from "./components/pages/MainPage";
 import Header from "./components/header/Header";
-import Cart from "./components/pages/Cart";
-import Registration from "./components/pages/Registration";
 import Footer from "./components/footer/Footer";
 import Subscribe from "./components/subscribtion/Subscribe";
-import Product from "./components/pages/Product";
+import AppRouter from "./components/AppRouter";
+import {HistoryRouter} from "./components/utils/HistoryRouter";
+import {browserHistory} from "./components/utils/BrowserHistory";
 
 function App() {
 
   return (
-      <BrowserRouter className="App">
+      <HistoryRouter history={browserHistory}>
           <div className="wrapper">
               <Header/>
               <div className="main">
-                  <Routes>
-                      <Route path="/catalog" element={<Catalog/>}/>
-                      <Route path="/mainpage" element={<MainPage/>}/>
-                      <Route path="/cart" element={<Cart/>}/>
-                      <Route path="/product" element={<Product/>}/>
-                      <Route path="/registration" element={<Registration/>}/>
-                  </Routes>
+                  <AppRouter/>
                   <Subscribe/>
               </div>
               <Footer/>
           </div>
-      </BrowserRouter>
+      </HistoryRouter>
 );
 }
 

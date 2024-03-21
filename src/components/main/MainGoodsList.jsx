@@ -1,8 +1,10 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import MainGoodsItem from "./MainGoodsItem";
 
 const MainGoodsList = (props) => {
+
     const partOfGoods = props.itemCount;
+
     return (
         <>
             {props.goods.map((good) => (

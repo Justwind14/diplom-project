@@ -12,8 +12,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .quantity {
-  margin-left: 24px;
-  width: 45px;
+  margin-left: 10px;
+  width: 65px;
   height: 25px;
   padding: 1px 16px;
   border: 1px solid #EAEAEA;
@@ -80,7 +80,7 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 
   &__close {
-    padding-top: 6px;
+    margin-bottom: 90px;
     &:hover path{
       fill: $color-dark;
     }

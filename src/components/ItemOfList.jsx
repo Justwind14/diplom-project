@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 
 const ItemOfList = (props) => {
+
     return (
         <li className={props.itemClassName}>
             {props.item}

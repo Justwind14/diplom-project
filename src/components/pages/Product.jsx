@@ -1,13 +1,16 @@
 import React, {useContext} from 'react';
 import ProductMainPart from "../product/ProductMainPart";
-import {Link} from "react-router-dom";
 import ProductTopPart from "../product/ProductTopPart";
 import ProductSlider from "../product/ProductSlider";
 import MainGoodsList from "../main/MainGoodsList";
 import {GoodsContext} from "../../context/Context";
+import {GoodsCartContext} from "../../context/ContextForCart";
 
 const Product = () => {
     const goodsForProduct = useContext(GoodsContext);
+
+    const testGoods = useContext(GoodsCartContext);
+
     return (
         <>
             <ProductTopPart/>

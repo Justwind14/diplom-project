@@ -1,7 +1,27 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
+import {GoodsCartContext} from "../../context/ContextForCart";
+import Buttons from "../UI/Buttons";
+import {toast} from "react-toastify";
 
 const MainGoodsItem = (props) => {
+
+    const { addGoods } = useContext(GoodsCartContext);
+
+    const someGoods = {
+        id: props.good.id,
+        title: props.good.title,
+        body: props.good.body,
+        price: props.good.price,
+        imgName: props.good.imgName,
+        alt: props.good.alt,
+        size: props.good.size,
+        color: props.good.color,
+        quantity: 1,
+    };
+
+    const notify = () => toast("Wow so easy!");
+
     return (
         <div className="card">
             <Link to="/product" className="card__link">
@@ -13,7 +33,7 @@ const MainGoodsItem = (props) => {
                 </div>
             </Link>
             <div className="card__add-to-cart">
-                <Link to="/cart" className="card__add-btn">
+                <Link onClick={() => addGoods(someGoods)} to='#' className="card__add-btn">
                     <svg className="card__add-icon" width="27" height="25" viewBox="0 0 27 25" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path

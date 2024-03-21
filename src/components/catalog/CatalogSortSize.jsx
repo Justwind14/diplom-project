@@ -31,10 +31,6 @@ const CatalogSortSize = () => {
                         <Inputs className="sort__check" type="checkbox" name="size L" id="L"/>
                         <label className="sort__label" htmlFor="L">L</label>
                     </li>
-                    <li className="sort__item">
-                        <Inputs className="sort__check" type="checkbox" name="size XL" id="XL"/>
-                        <label className="sort__label" htmlFor="XL">XL</label>
-                    </li>
                 </ul>
 
             </details>

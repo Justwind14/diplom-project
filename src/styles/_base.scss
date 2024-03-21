@@ -35,6 +35,14 @@ a {
   padding-right: calc(50% - $width / 2);
 }
 
+.svg-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  fill: currentColor;
+}
+
 .hidden {
   display: none;
 }
