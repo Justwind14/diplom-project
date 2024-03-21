@@ -33,6 +33,14 @@ const ContextForCart = ({children}) => {
         );
     };
 
+    useEffect(() => {
+        let sum = 0;
+        for (const good of goods) {
+            sum += (good.price * good.quantity);
+        }
+        setTotalSum(sum);
+    }, [goods]);
+
 
     const itemCloser = (currentItem) => {
         setGoods(goods => goods.filter(good => good.id !== currentItem.id));
@@ -42,13 +50,7 @@ const ContextForCart = ({children}) => {
         setGoods([])
     }
 
-    useEffect(() => {
-        let sum = 0;
-        for (const good of goods) {
-            sum += (good.price * good.quantity);
-        }
-        setTotalSum(sum);
-    }, [goods]);
+
 
 
 

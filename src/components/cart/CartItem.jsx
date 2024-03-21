@@ -4,8 +4,6 @@ import Inputs from "../UI/Inputs";
 import Buttons from "../UI/Buttons";
 
 const CartItem = (props) => {
-    const [countValue, setCountValue] = useState(1);
-
     const handleClick = () => {
         props.forDeleting(props.good);
     }
@@ -34,10 +32,9 @@ const CartItem = (props) => {
                 <p className="card-min__text">
                     <label className="card-min__text" htmlFor="quantity">Quantity:</label>
                     <Inputs id="quantity" className="quantity" type="number" name="quantity" min="1" max="9"
-                           placeholder="1" pattern="^-?\d+$" title="Enter only numbers" value={countValue}
+                           placeholder="1" pattern="^-?\d+$" title="Enter only numbers" value={props.good.quantity}
                             onChange={(e) => {
-                                setCountValue(e.target.value);
-                                props.updateQuantity(props.good, countValue);
+                                props.updateQuantity(props.good, e.target.value);
                             }}
                     />
                 </p>
