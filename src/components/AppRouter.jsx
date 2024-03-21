@@ -10,11 +10,12 @@ const AppRouter = () => {
 
     return (
         <Routes>
-            <Route path="/catalog" element={<Catalog/>}/>
-            <Route path="/mainpage" element={<MainPage/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/product" element={<Product/>}/>
-            <Route path="/registration" element={<Registration/>}/>
+            <Route path="/" element={<MainPage/>}>
+                <Route path="/catalog" element={<Catalog/>}/>
+                <Route path="/cart" element={<Cart/>}/>
+                <Route path="/product" element={<Product/>}/>
+                <Route path="/registration" element={<Registration/>}/>
+            </Route>
         </Routes>
     );
 };
