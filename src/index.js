@@ -6,9 +6,10 @@ import ContextForCart from "./context/ContextForCart";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <ContextForCart>
-        <Context>
-            <App/>
-        </Context>
-    </ContextForCart>
+     <Context>
+         <ContextForCart>
+             <App/>
+         </ContextForCart>
+     </Context>
+
 );

@@ -1,9 +1,9 @@
-import React, {createContext, useContext, useState} from 'react';
+import React, {createContext, useState} from 'react';
 
-export const GoodsContext = createContext(undefined);
+export const GoodsContext = createContext();
 
 const Context = ({ children }) => {
-    const [goodis, setGoods] = useState([
+    const [goodis, setGoodis] = useState([
             {id: 1, title: 'ELLEREY X M\'O CAPSULE',
                 body: 'Known for her sculptural takes on traditional tailoring,\n' +
                     'Australian arbiter of cool Kym Ellerey teams up with Moda Operandi.',
@@ -21,7 +21,6 @@ const Context = ({ children }) => {
                 alt: 'goods2',
                 size: 'XS',
                 color: 'White',
-
             },
             {id: 3, title: 'ELLEREY X M\'O CAPSULE',
                 body: 'Known for her sculptural takes on traditional tailoring,\n' +
@@ -95,6 +94,5 @@ const Context = ({ children }) => {
         </GoodsContext.Provider>
     );
 };
-
 
 export default Context;

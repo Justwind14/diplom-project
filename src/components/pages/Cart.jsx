@@ -19,10 +19,7 @@ const Cart = () => {
                     <div className="cards-buttons">
                         <div className="cards">
                             {goods.map(good => (
-                                goods.length !== 0 ?
-                                    <CartItem key={good.id} good={good} forDeleting={itemCloser}
-                                              updateQuantity={updateQuantity}/> :
-                                    <p>Корзина пуста</p>
+                                <CartItem key={good.id} good={good} forDeleting={itemCloser} updateQuantity={updateQuantity}/>
                             ))}
                         </div>
                         <ul className="buttons">

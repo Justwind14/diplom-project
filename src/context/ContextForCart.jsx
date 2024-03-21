@@ -8,6 +8,7 @@ const ContextForCart = ({children}) => {
     const [goods, setGoods] = useState([]);
     const [totalSum, setTotalSum] = useState(0);
 
+
     const addGoods = (good) => {
         setGoods((prevState) => [...prevState, good]);
 
@@ -21,8 +22,20 @@ const ContextForCart = ({children}) => {
             progress: undefined,
             theme: "light",
         });
-    }
 
+        // setGoods( (prevState) => [...prevState,{id: 1,
+        //     title: 'ELLEREY X M\'O CAPSULE',
+        //     body: 'Known for her sculptural takes on traditional tailoring,\n' +
+        //         'Australian arbiter of cool Kym Ellerey teams up with Moda Operandi.',
+        //     price: 52.00,
+        //     imgName: 'product1.jpg',
+        //     alt: 'goods1',
+        //     size: 'XS',
+        //     color: 'Red',
+        //     quantity: 1,
+        // }]);
+
+    }
 
     const updateQuantity = (good, newQuantity) => {
         setGoods(
@@ -51,11 +64,8 @@ const ContextForCart = ({children}) => {
     }
 
 
-
-
-
     return (
-        <GoodsCartContext.Provider value={{goods, addGoods, cartClearing, itemCloser, totalSum, updateQuantity}}>
+        <GoodsCartContext.Provider value={{goods, cartClearing, itemCloser, totalSum, updateQuantity, addGoods}}>
             <ToastContainer />
             {children}
         </GoodsCartContext.Provider>
