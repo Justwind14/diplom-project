@@ -6,8 +6,6 @@
   background: linear-gradient(-45deg, #f1e4e6, #efdfce, #efcedf, #f1e4e6);
   background-size: 400% 400%;
   margin-bottom: 65px;
-  @include bg-color;
-  animation: bg-color 8s infinite linear;
 
   &__img {
     display: flex;
