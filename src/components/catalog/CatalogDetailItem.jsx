@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const CatalogDetailItem = (props) => {
     return (
-        <Link to="#" className="filter__link">{props.detailItem.kindOf}</Link>
+        <Link to="/product" className="filter__link">{props.detailItem.kindOf}</Link>
     );
 };
 

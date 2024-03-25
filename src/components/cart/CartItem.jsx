@@ -32,7 +32,7 @@ const CartItem = (props) => {
                 <p className="card-min__text">
                     <label className="card-min__text" htmlFor="quantity">Quantity:</label>
                     <Inputs id="quantity" className="quantity" type="number" name="quantity" min="1" max="9"
-                           placeholder="1" pattern="^-?\d+$" title="Enter only numbers" value={props.good.quantity}
+                        placeholder="1" pattern="^-?\d+$" title="Enter only numbers" value={props.good.quantity}
                             onChange={(e) => {
                                 props.updateQuantity(props.good, e.target.value);
                             }}
