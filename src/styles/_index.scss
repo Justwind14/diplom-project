@@ -95,7 +95,6 @@
 .goods {
   margin-right: 8px;
   margin-left: 8px;
-  margin-bottom: 95px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,8 +117,9 @@
   &__products {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 48px;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 50px;
   }
 
   &__btn {
@@ -136,8 +136,13 @@
       background-color: $color-accent;
       border: 1px solid $color-accent;
     }
+
+
   }
 
+  &__button {
+    margin-bottom: 88px;
+  }
 }
 
 .features-wrapper {
@@ -200,7 +205,7 @@
   }
 
   .card {
-    width: 49%;
+    width: 48%;
   }
 
   .features {

@@ -1,14 +1,16 @@
 import React from 'react';
-import CatalogSoRtTrend from "./CatalogSoRtTrend";
 import CatalogSortSize from "./CatalogSortSize";
 import CatalogSortPrice from "./CatalogSortPrice";
+import CatalogSortColor from "./CatalogSortColor";
 
-const CatalogSort = () => {
+const CatalogSort = ({onSizeChange, onPriceRangeChange, onColorChange}) => {
+
+
     return (
         <div className="sort-wrapper">
-            <CatalogSoRtTrend/>
-            <CatalogSortSize/>
-            <CatalogSortPrice/>
+            <CatalogSortColor onColorChange={onColorChange}/>
+            <CatalogSortSize onSizeChange={onSizeChange}/>
+            <CatalogSortPrice onPriceRangeChange={onPriceRangeChange}/>
         </div>
     );
 };

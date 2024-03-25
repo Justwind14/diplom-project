@@ -1,7 +1,17 @@
 import React from 'react';
 import Inputs from "../UI/Inputs";
 
-const CatalogSortPrice = () => {
+const CatalogSortPrice = ({onPriceRangeChange}) => {
+        const priceRanges = [
+            { label: 'All', range: [0, Infinity] },
+            { label: '0 - 20$', range: [0, 20] },
+            { label: '21 - 40$', range: [21, 40] },
+            { label: '41 - 60$', range: [41, 60] },
+            { label: '61 - 80$', range: [61, 80] },
+            { label: '81 - 100$', range: [81, 100] },
+            { label: '101 - max', range: [101, Infinity] },
+        ];
+
     return (
         <div className="sort">
             <details className="sort__price">
@@ -15,36 +25,19 @@ const CatalogSortPrice = () => {
                     </svg>
                 </summary>
                 <ul className="sort__content sort__content-price">
-                    <li className="sort__item">
-                        <Inputs className="sort__radio" type="radio" id="price1" name="price"
-                               value="0-500"/>
-                        <label className="sort__label sort__label-price" htmlFor="price1">0 -
-                            500$</label>
-                    </li>
-                    <li className="sort__item">
-                        <Inputs className="sort__radio" type="radio" id="price2" name="price"
-                               value="500-1000"/>
-                        <label className="sort__label sort__label-price" htmlFor="price2">500$ -
-                            1000$</label>
-                    </li>
-                    <li className="sort__item">
-                        <Inputs className="sort__radio" type="radio" id="price3" name="price"
-                               value="1000-5000"/>
-                        <label className="sort__label sort__label-price" htmlFor="price3">1000$ -
-                            5000$</label>
-                    </li>
-                    <li className="sort__item">
-                        <Inputs className="sort__radio" type="radio" id="price4" name="price"
-                               value="5000-10000"/>
-                        <label className="sort__label sort__label-price" htmlFor="price4">5000$ -
-                            10000$</label>
-                    </li>
-                    <li className="sort__item">
-                        <Inputs className="sort__radio" type="radio" id="price5" name="price"
-                               value="10000-25000"/>
-                        <label className="sort__label sort__label-price" htmlFor="price5">10000$ -
-                            25000$</label>
-                    </li>
+                    {priceRanges.map(({ label, range }, index) => (
+                        <li key={index} className="sort__item">
+                            <Inputs
+                                className="sort__radio"
+                                type="radio"
+                                name="priceRange"
+                                id={`priceRange${index}`}
+                                onChange={() => onPriceRangeChange(range)}
+                            />
+                            <label className="sort__label sort__label-price" htmlFor={`priceRange${index}`}>{label}</label>
+                        </li>
+                    ))}
+
                 </ul>
             </details>
         </div>

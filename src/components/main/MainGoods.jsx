@@ -15,7 +15,7 @@ const MainGoods = () => {
                     <MainGoodsList goods={goods} itemCount={7}/>
                 </div>
                 <div className="goods__button">
-                    <Link className="goods__btn" to="/catalog">Browse All Product</Link>
+                    <Link className="goods__btn" to="/catalog#scrollToGoods">Browse All Product</Link>
                 </div>
             </section>
         </div>

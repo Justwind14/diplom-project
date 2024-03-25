@@ -1,7 +1,7 @@
 import React from 'react';
 import Inputs from "../UI/Inputs";
 
-const CatalogSoRtTrend = () => {
+const CatalogSortTrend = () => {
     return (
         <div className="sort">
             <details className="sort__trend">
@@ -33,4 +33,4 @@ const CatalogSoRtTrend = () => {
     );
 };
 
-export default CatalogSoRtTrend;
+export default CatalogSortTrend;

@@ -3,8 +3,9 @@
 .card {
   position: relative;
   width: 31%;
+  min-width: 348px;
+
   background-color: $color-card-bg;
-  margin-bottom: 30px;
   &:hover .card__img {
     filter: brightness(0.4);
     opacity: 0.8;

@@ -1,14 +1,14 @@
-import React from 'react';
 import Inputs from "../UI/Inputs";
+import React from 'react';
 
-const CatalogSortSize = ({onSizeChange}) => {
-    const allSizes = ['XS', 'S', 'M', 'L']
+const CatalogSortColor = ({onColorChange}) => {
+    const allColors = ['Red', 'White', 'Blue', 'Green', 'Black']
 
     return (
         <div className="sort">
             <details className="sort__size">
                 <summary className="sort__list">
-                    <h3 className="sort__title">SIZE</h3>
+                    <h3 className="sort__title">COLOR</h3>
                     <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -16,13 +16,13 @@ const CatalogSortSize = ({onSizeChange}) => {
                             fill="#6F6E6E"/>
                     </svg>
                 </summary>
-                <ul className="sort__content sort__content-size">
-                    {allSizes.map((size) => (
-                        <li key={size} className="sort__item">
-                            <Inputs className="sort__check" type="checkbox" name={`size ${size}`} id={size}
-                                    onChange={() => onSizeChange(size)}
+                <ul className="sort__content sort__content-color">
+                    {allColors.map((color) => (
+                        <li key={color} className="sort__item">
+                            <Inputs className="sort__check" type="checkbox" name={`color ${color}`} id={color}
+                                    onChange={() => onColorChange(color)}
                             />
-                            <label className="sort__label" htmlFor={size}>{size}</label>
+                            <label className="sort__label" htmlFor={color}>{color}</label>
                         </li>
                     ))}
                 </ul>
@@ -32,4 +32,4 @@ const CatalogSortSize = ({onSizeChange}) => {
     );
 };
 
-export default CatalogSortSize;
+export default CatalogSortColor;
