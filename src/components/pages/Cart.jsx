@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 import {Link} from "react-router-dom";
 import CartItem from "../cart/CartItem";
 import CartShipping from "../cart/CartShipping";
@@ -19,7 +19,8 @@ const Cart = () => {
                     <div className="cards-buttons">
                         <div className="cards">
                             {goods.map(good => (
-                                <CartItem key={good.id} good={good} forDeleting={itemCloser} updateQuantity={updateQuantity}/>
+                                <CartItem key={good.id} good={good} forDeleting={itemCloser}
+                                          updateQuantity={updateQuantity}/>
                             ))}
                         </div>
                         <ul className="buttons">

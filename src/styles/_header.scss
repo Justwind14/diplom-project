@@ -68,36 +68,18 @@
   }
 }
 
-.burger {
-  cursor: pointer;
-  &__check {
-    display: none;
-    position: relative;
-
-    &:checked + .burger-menu {
-      display: flex;
-      right: 0;
-    }
-    &:checked + .close {
-      display: flex;
-
-    }
-  }
-}
-
 .burger-menu {
-  display: none;
-  position: absolute;
-  flex-direction: column;
-  top: 75px;
-  right: -235px;
-  padding: 32px 34px 12px 32px;
-  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-  background: $color-white;
-  z-index: 111;
+  //display: none;
+  //position: absolute;
+  //flex-direction: column;
+  //top: 75px;
+  //right: -235px;
+  //padding: 32px 34px 12px 32px;
+  //box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  //background: $color-white;
+  //z-index: 111;
   list-style: none;
-  transition: all 0.5s;
-
+  //transition: all 0.5s;
 
   &__title {
     color: $color-dark-text;
@@ -135,22 +117,7 @@
       color: $color-medium-text;
     }
   }
-
 }
-
-.close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 555;
-  &:hover .close-icon{
-    fill: $color-dark-text;
-  }
-  //&:hover .burger-menu{
-  //  display: none;
-  //}
-}
-
 
 .second-header {
   background: $color-light;
@@ -196,4 +163,66 @@
     font-weight: 700;
     color: $color-accent;
   }
+}
+
+.burger {
+  cursor: pointer;
+}
+
+/*
+                    модальное окно
+ */
+.modal {
+  display: flex;
+  align-items: flex-end;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top:  0;
+  left: 0;
+  flex-direction: column;
+  transform: scale(0);
+  z-index: 1000;
+
+
+  &__content {
+    align-items: start;
+    margin-top: 75px;
+    padding: 20px;
+    margin-right: 15px;
+    background-color: white;
+    width: 220px;
+    border: 1px solid $color-light-text;
+  }
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+/*
+                          СЧЕТЧИК ТОВАРОВ В КОРЗИНЕ
+ */
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-icon {
+  width: 30px;
+  height: auto;
+}
+
+.item-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: $color-accent;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
 }

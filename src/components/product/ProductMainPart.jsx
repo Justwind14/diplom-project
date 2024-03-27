@@ -1,11 +1,11 @@
 import React from 'react';
 import Buttons from "../UI/Buttons";
 import ProductDescription from "./ProductDescription";
-import ProductChooseColor from "./ProductChooseColor";
-import ProductChooseSize from "./ProductChooseSize";
-import ProductChooseQuantity from "./ProductChooseQuantity";
+import SortColor from "../UI/sort/SortColor";
+import SortSize from "../UI/sort/SortSize";
+import SortPrice from "../UI/sort/SortPrice";
 
-const ProductMainPart = () => {
+const ProductMainPart = ({onSizeChange, onPriceRangeChange, onColorChange}) => {
     return (
         <div className="center">
             <section className="product-desc center">
@@ -13,9 +13,9 @@ const ProductMainPart = () => {
                 <div className="product__down">
                     <form className="choose-form" action="#">
                         <div className="choose-wrapper">
-                            <ProductChooseColor/>
-                            <ProductChooseSize/>
-                            <ProductChooseQuantity/>
+                            <SortColor onColorChange={onColorChange}/>
+                            <SortSize onSizeChange={onSizeChange}/>
+                            <SortPrice onPriceRangeChange={onPriceRangeChange}/>
                         </div>
                         <Buttons className="choose__button" type="submit">
                             <svg className="btn-icon" width="27" height="25" viewBox="0 0 27 25" fill="none"

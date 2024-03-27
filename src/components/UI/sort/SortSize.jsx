@@ -1,7 +1,7 @@
 import React from 'react';
-import Inputs from "../UI/Inputs";
+import Inputs from "../Inputs";
 
-const CatalogSortSize = ({onSizeChange}) => {
+const SortSize = ({onSizeChange}) => {
     const allSizes = ['XS', 'S', 'M', 'L']
 
     return (
@@ -32,4 +32,4 @@ const CatalogSortSize = ({onSizeChange}) => {
     );
 };
 
-export default CatalogSortSize;
+export default SortSize;

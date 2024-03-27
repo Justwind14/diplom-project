@@ -2,10 +2,11 @@ import React, {useContext, useEffect, useRef, useState} from 'react';
 import CatalogFilter from "../catalog/CatalogFilter";
 import MainGoodsList from "../main/MainGoodsList";
 import {GoodsContext} from "../../context/Context";
-import CatalogSort from "../catalog/CatalogSort";
+import Sort from "../UI/sort/Sort";
 import ProductTopPart from "../product/ProductTopPart";
 import usePagination from "../utils/usePagination"
 import Pagination from "../UI/Pagination";
+import {useFilter} from "../utils/useFilter";
 
 
 // Основной компонент страницы каталога
@@ -16,38 +17,10 @@ const Catalog = () => {
     const goodsForFilter = useContext(GoodsContext);
     // Состояние для управления текущей страницей пагинации
     const [currentPage, setCurrentPage] = useState(1);
-    // Состояния для хранения выбранных фильтров
-    const [selectedSizes, setSelectedSizes] = useState({});
-    const [selectedColors, setSelectedColors] = useState({});
-    const [selectedPriceRange, setSelectedPriceRange] = useState([0, Infinity]);
 
-    // Обработчики изменения фильтров
-    const handleSizeChange = (size) => {
-        const sizeLowerCase = size.toLowerCase(); // Приводим к нижнему регистру
-        setSelectedSizes(prev => ({ ...prev, [sizeLowerCase]: !prev[sizeLowerCase] }));
-    };
-
-    const handleColorChange = (color) => {
-        const colorLowerCase = color.toLowerCase(); // Приводим к нижнему регистру
-        setSelectedColors(prev => ({ ...prev, [colorLowerCase]: !prev[colorLowerCase] }));
-    };
-
-    const handlePriceRangeChange = (range) => {
-        setSelectedPriceRange(range);
-    };
-
-    // Применение фильтров к списку товаров
-    const filteredGoods = goodsForFilter.filter(good => {
-        const isAnyColorSelected = Object.values(selectedColors).some(value => value);
-        const isAnySizeSelected = Object.values(selectedSizes).some(value => value);
-
-        // Условия для фильтрации
-        const sizeCondition = !isAnySizeSelected || selectedSizes[good.size.toLowerCase()];
-        const colorCondition = !isAnyColorSelected || selectedColors[good.color.toLowerCase()];
-        const priceCondition = good.price >= selectedPriceRange[0] && good.price <= selectedPriceRange[1];
-
-        return colorCondition && sizeCondition && priceCondition;
-    });
+    // вызываем хук управления состоянием сортировки и получаем необходимые переменные, функции и отфильтрованные товары
+    const {selectedSizes, handleSizeChange, selectedColors, handleColorChange, selectedPriceRange,
+        handlePriceRangeChange, filteredGoods} = useFilter(goodsForFilter);
 
     // Эффект для сброса текущей страницы при изменении фильтров
     useEffect(() => {
@@ -76,7 +49,7 @@ const Catalog = () => {
                 <section className="filter-sort" ref={goodsListRef}>
                     <div className="filter-sort-wrapper">
                         <CatalogFilter/>
-                        <CatalogSort
+                        <Sort
                             onSizeChange={handleSizeChange}
                             onPriceRangeChange={handlePriceRangeChange}
                             onColorChange={handleColorChange}

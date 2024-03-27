@@ -1,14 +1,22 @@
-import Inputs from "../UI/Inputs";
 import React from 'react';
+import Inputs from "../Inputs";
 
-const CatalogSortColor = ({onColorChange}) => {
-    const allColors = ['Red', 'White', 'Blue', 'Green', 'Black']
+const SortPrice = ({onPriceRangeChange}) => {
+        const priceRanges = [
+            { label: 'All', range: [0, Infinity] },
+            { label: '0 - 20$', range: [0, 20] },
+            { label: '21 - 40$', range: [21, 40] },
+            { label: '41 - 60$', range: [41, 60] },
+            { label: '61 - 80$', range: [61, 80] },
+            { label: '81 - 100$', range: [81, 100] },
+            { label: '101 - max', range: [101, Infinity] },
+        ];
 
     return (
         <div className="sort">
-            <details className="sort__size">
+            <details className="sort__price">
                 <summary className="sort__list">
-                    <h3 className="sort__title">COLOR</h3>
+                    <h3 className="sort__title">PRICE</h3>
                     <svg width="11" height="6" viewBox="0 0 11 6" fill="none"
                          xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -16,20 +24,24 @@ const CatalogSortColor = ({onColorChange}) => {
                             fill="#6F6E6E"/>
                     </svg>
                 </summary>
-                <ul className="sort__content sort__content-color">
-                    {allColors.map((color) => (
-                        <li key={color} className="sort__item">
-                            <Inputs className="sort__check" type="checkbox" name={`color ${color}`} id={color}
-                                    onChange={() => onColorChange(color)}
+                <ul className="sort__content sort__content-price">
+                    {priceRanges.map(({ label, range }, index) => (
+                        <li key={index} className="sort__item">
+                            <Inputs
+                                className="sort__radio"
+                                type="radio"
+                                name="priceRange"
+                                id={`priceRange${index}`}
+                                onChange={() => onPriceRangeChange(range)}
                             />
-                            <label className="sort__label" htmlFor={color}>{color}</label>
+                            <label className="sort__label sort__label-price" htmlFor={`priceRange${index}`}>{label}</label>
                         </li>
                     ))}
-                </ul>
 
+                </ul>
             </details>
         </div>
     );
 };
 
-export default CatalogSortColor;
+export default SortPrice;
