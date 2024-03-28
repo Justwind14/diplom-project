@@ -19,7 +19,8 @@ const ModalMenu = ({active, setActive}) => {
     ];
     return (
         <div className={active ? 'modal active' : 'modal'} onClick={() => setActive(false)}>
-            <div className='modal__content' onClick={e => e.stopPropagation()}>
+            <div className={active ? 'modal__content active' : 'modal__content'}
+                 onClick={e => e.stopPropagation()}>
                 <LiLinkList items={menuList} title='MENU' className='burger-menu__title' />
                 <LiLinkList items={menuList} title='WOMAN' className='burger-menu__heading' />
                 <LiLinkList items={menuList} title='KIDS' className='burger-menu__heading' />
