@@ -1,25 +1,13 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import {Link} from "react-router-dom";
-import {GoodsCartContext} from "../../context/ContextForCart";
+import useAddToCart from "../utils/useAddToCart";
 
 const MainGoodsItem = (props) => {
-
-    const {addGoods} = useContext(GoodsCartContext)
-
-    const someGoods = {
-        id: props.good.id,
-        title: props.good.title,
-        body: props.good.body,
-        price: props.good.price,
-        imgName: props.good.imgName,
-        alt: props.good.alt,
-        size: props.good.size,
-        color: props.good.color,
-        quantity: 1,
-    };
+    //
+    const addToCart = useAddToCart();
 
     const handleClick = () => {
-        addGoods(someGoods)
+        addToCart(props.good);
     }
 
     return (
