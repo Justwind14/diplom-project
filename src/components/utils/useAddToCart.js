@@ -1,10 +1,10 @@
-import { useContext } from 'react';
-import { GoodsCartContext } from "../../context/ContextForCart";
+import {useContext} from 'react';
+import {GoodsCartContext} from "../../context/ContextForCart";
 
 const useAddToCart = () => {
     const { addGoods } = useContext(GoodsCartContext);
 
-    const addToCart = (goodsItem) => {
+    return (goodsItem) => {
         const someGoods = {
             id: goodsItem.id,
             title: goodsItem.title,
@@ -18,8 +18,6 @@ const useAddToCart = () => {
         };
         addGoods(someGoods);
     };
-
-    return addToCart;
 };
 
 export default useAddToCart;
