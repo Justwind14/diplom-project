@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/diplom-project/static/css/main.577da641.css",
-    "main.js": "/diplom-project/static/js/main.e428f5c2.js",
+    "main.css": "/diplom-project/static/css/main.b99d984d.css",
+    "main.js": "/diplom-project/static/js/main.cf7219e9.js",
     "static/js/312.0a428570.chunk.js": "/diplom-project/static/js/312.0a428570.chunk.js",
     "static/media/offer_large.png": "/diplom-project/static/media/offer_large.25f39845cf43220a86f0.png",
     "static/media/top_img_big.png": "/diplom-project/static/media/top_img_big.82e3036cc3e38d942237.png",
@@ -31,21 +31,21 @@
     "static/media/card2_big.png": "/diplom-project/static/media/card2_big.4cf819cedf9bd539fcfd.png",
     "static/media/subscribe.png": "/diplom-project/static/media/subscribe.a8737587d1caeede17ff.png",
     "static/media/card2_small.png": "/diplom-project/static/media/card2_small.e0cd63d245bcbcb96fff.png",
-    "static/media/advantages_img1.svg": "/diplom-project/static/media/advantages_img1.e3c9d1347b813cc216a0.svg",
-    "static/media/advantages_img3.svg": "/diplom-project/static/media/advantages_img3.de1a44abbee3b15c95d2.svg",
-    "static/media/advantages_img2.svg": "/diplom-project/static/media/advantages_img2.e6068304d5abbc235058.svg",
-    "static/media/FormaCart.svg": "/diplom-project/static/media/FormaCart.029c1dd8608b35a2067e.svg",
-    "static/media/cleanCart.svg": "/diplom-project/static/media/cleanCart.a2a41dad5b413afbb36e.svg",
-    "static/media/marker.svg": "/diplom-project/static/media/marker.a93987376c570dea9185.svg",
+    "static/media/advantages_img1.svg": "/diplom-project/static/media/advantages_img1.dd86ce0d5e22a06d1785.svg",
+    "static/media/advantages_img3.svg": "/diplom-project/static/media/advantages_img3.d3cfba46c7fd4d1e4c8d.svg",
+    "static/media/advantages_img2.svg": "/diplom-project/static/media/advantages_img2.fe0d8affefedea096665.svg",
+    "static/media/FormaCart.svg": "/diplom-project/static/media/FormaCart.f24deb6b9094751621ea.svg",
+    "static/media/cleanCart.svg": "/diplom-project/static/media/cleanCart.7327e50f66a57bbb8cb8.svg",
+    "static/media/marker.svg": "/diplom-project/static/media/marker.ee8b806562dac1e8609b.svg",
     "index.html": "/diplom-project/index.html",
-    "static/media/VectorPagRight.svg": "/diplom-project/static/media/VectorPagRight.9ac058f5cdfef1616428.svg",
-    "static/media/VectorPagLeft.svg": "/diplom-project/static/media/VectorPagLeft.06000798f7df34f57546.svg",
-    "main.577da641.css.map": "/diplom-project/static/css/main.577da641.css.map",
-    "main.e428f5c2.js.map": "/diplom-project/static/js/main.e428f5c2.js.map",
+    "static/media/VectorPagRight.svg": "/diplom-project/static/media/VectorPagRight.c25a5260062ffc3a7e6b.svg",
+    "static/media/VectorPagLeft.svg": "/diplom-project/static/media/VectorPagLeft.20f883ab394bb7b3a216.svg",
+    "main.b99d984d.css.map": "/diplom-project/static/css/main.b99d984d.css.map",
+    "main.cf7219e9.js.map": "/diplom-project/static/js/main.cf7219e9.js.map",
     "312.0a428570.chunk.js.map": "/diplom-project/static/js/312.0a428570.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.577da641.css",
-    "static/js/main.e428f5c2.js"
+    "static/css/main.b99d984d.css",
+    "static/js/main.cf7219e9.js"
   ]
 }
