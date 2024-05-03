@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkshop_project=self.webpackChunkshop_project||[]).push([[312],{312:(e,s,n)=>{n.r(s),n.d(s,{default:()=>j});var r=n(117),c=n(43),t=n(579);const a=()=>(0,t.jsx)(r.es,{children:(0,t.jsx)(r.b7,{name:"App",children:(0,t.jsx)(r.uA,{name:"Loader",children:(0,t.jsx)(r.KT,{children:(0,t.jsx)(h,{})})})})});function h(){return(0,t.jsx)(c.Fragment,{children:"Loading..."})}const j=()=>(0,t.jsx)(r.m8,{palette:(0,t.jsx)(a,{})})}}]);
+//# sourceMappingURL=312.0a428570.chunk.js.map
