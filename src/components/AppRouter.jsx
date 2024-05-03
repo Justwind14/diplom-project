@@ -7,16 +7,15 @@ import Product from "./pages/Product";
 import Registration from "./pages/Registration";
 
 const AppRouter = () => {
-
     return (
-        <Routes>
-            <Route path="/" element={<MainPage/>}/>
-            <Route path="/catalog" element={<Catalog/>}/>
-            <Route path="/cart" element={<Cart/>}/>
-            <Route path="/product" element={<Product/>}/>
-            <Route path="/registration" element={<Registration/>}/>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/registration" element={<Registration />} />
+      </Routes>
     );
-};
+  };
 
 export default AppRouter;
